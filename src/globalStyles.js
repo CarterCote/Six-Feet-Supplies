@@ -79,7 +79,7 @@ export const OutlineButton = styled.button`
   border-radius: 4px;
 
   white-space: nowrap;
-  padding: ${({ big }) => (big ? '20px 50px' : '16px 20px')};
+  padding: ${({ big }) => (big ? '20px 45px' : '16px 20px')};
   color: ${({ primary }) => (primary ? '#FB7131' : '#4B59F7')};
   font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
   outline: none;

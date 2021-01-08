@@ -42,7 +42,7 @@ export const IntroWrapper = styled.div`
 `;
 
 export const FeaturesHeading = styled.h1`
-  color: #454545;
+  color: #3D3D3D;
   font-size: 48px;
   margin-bottom: 24px;
   
@@ -62,7 +62,7 @@ export const FeaturesContainer = styled.div`
   }
 `;
 
-export const FeaturesCard = styled(Link)`
+export const FeaturesCard = styled.div`
   background: #fff;
   ${'' /* box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2); */}
   margin: 65px;
@@ -153,13 +153,13 @@ export const FeaturesCardFeatures = styled.ul`
   color: #454545;
 `;
 
-export const FeaturesCardSubtitle = styled.li`
+export const FeaturesCardSubtitle = styled.p`
   margin-bottom: 10px;
   color: #FB7131;
   font-size: 22px;
 `;
 
-export const FeaturesCardFeature = styled.li`
+export const FeaturesCardFeature = styled.p`
   margin-bottom: 10px;
   color: #3078BE;
   font-size: 18px;

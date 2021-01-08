@@ -20,6 +20,17 @@ import {
   Img
 } from './InfoSection/InfoSection.elements';
 
+import {
+    FeaturesCard,
+    FeaturesCardImg,
+    FeaturesCardPlan,
+    FeaturesCardCost,
+    FeaturesCardLength,
+    FeaturesCardFeatures,
+    FeaturesCardSubtitle,
+    FeaturesCardFeature
+  } from './FeatureCard/FeatureCards.elements';
+
 function Process({
   primary,
   lightBg,
@@ -97,9 +108,16 @@ function Process({
                 </InfoRow>
             </InfoColumn>
             <ImageColumn>
-                <ImgWrapper start={start}>
-                    <Img src={process} alt={alt} />
-                </ImgWrapper>
+                <FeaturesCard style={{width: "555px", height: "620px"}}>
+                    <ImgWrapper start={start}>
+                        <Img src={process} alt={alt} />
+                    </ImgWrapper>
+                    <FeaturesCardSubtitle style={{margin: "18px"}}>PAY SECURELY & SAFELY.</FeaturesCardSubtitle>
+                    <FeaturesCardFeature style={{margin: "18px", paddingRight: "0px"}}><i>Credit</i>: we'll email an invoice charging you for items you want to keep.</FeaturesCardFeature>
+                    <FeaturesCardFeature style={{margin: "18px", paddingRight: "0px"}}><i>Cash</i>: our team member includes an envelope with your supplies. Pay for the items you want to keep, then leave the envelope outside and contact your deliverer.</FeaturesCardFeature>
+                    <FeaturesCardFeature style={{margin: "18px", paddingRight: "0px"}}><i>Venmo</i>: contact your deliverer to exchange Venmo information.</FeaturesCardFeature>
+
+                </FeaturesCard>
             </ImageColumn>
           </InfoRow>
         </Container>

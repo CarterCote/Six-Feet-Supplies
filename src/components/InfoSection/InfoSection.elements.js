@@ -136,7 +136,20 @@ export const Heading = styled.h1`
   font-size: 48px;
   line-height: 1.3;
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? '#3078BE' : '#000000')};
+  color: ${({ lightText }) => (lightText ? '#3078BE' : '#303030')};
+`;
+
+export const Stat = styled.h1`
+  position: absolute;
+  ${'' /* top: 27%; */}
+  margin-top: 105px;
+  margin-left: 110px;
+
+  ${'' /* left: 17%; */}
+  ${'' /* transform: translate(-50%, -50%); */}
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 900;
 `;
 
 export const Subheading = styled.h1`
@@ -144,7 +157,7 @@ export const Subheading = styled.h1`
   margin-bottom: 5px;
   font-size: 22px;
   line-height: 1.3;
-  color: ${({ lightTextDesc }) => (lightTextDesc ? '#3078BE' : '#000000')};
+  color: ${({ lightTextDesc }) => (lightTextDesc ? '#3078BE' : '#303030')};
 `;
 
 export const SpacedHeading = styled.h1`
@@ -153,7 +166,7 @@ export const SpacedHeading = styled.h1`
   letter-spacing: 8px;
   line-height: 1.3;
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? '#3078BE' : '#000000')};
+  color: ${({ lightText }) => (lightText ? '#3078BE' : '#303030')};
 `;
 
 
