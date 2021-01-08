@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Container } from '../../globalStyles';
 
 export const Nav = styled.nav`
-  background: #101522;
+  background: #fff;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -74,9 +74,10 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li`
   height: 80px;
   border-bottom: 2px solid transparent;
-
-  &:hover {
-    border-bottom: 2px solid #4b59f7;
+  width: 185px;
+  align-item: center;
+  ${'' /* &:hover ${NavLinkDropdown} { */}
+    display: block;
   }
 
   @media screen and (max-width: 960px) {
@@ -98,14 +99,20 @@ export const NavItemBtn = styled.li`
   }
 `;
 
-export const NavLinks = styled(Link)`
-  color: #fff;
+export const NavText = styled(Link)`
+  color: #000;
+  font-family: 'FuturaLTPro-Book', sans-serif;
+  font-weight: bold;
   display: flex;
   align-items: center;
+  text-align: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
 
+  :hover {
+    color: #454545;
+  }
   @media screen and (max-width: 960px) {
     text-align: center;
     padding: 2rem;
@@ -117,6 +124,51 @@ export const NavLinks = styled(Link)`
       transition: all 0.3s ease;
     }
   }
+`;
+
+export const NavLinks = styled(Link)`
+  color: #000;
+  font-family: 'FuturaLTPro-Book', sans-serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+
+  :hover {
+    color: #454545;
+  }
+  @media screen and (max-width: 960px) {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+
+    &:hover {
+      color: #4b59f7;
+      transition: all 0.3s ease;
+    }
+  }
+`;
+
+export const NavLinkCaret = styled.svg`
+  fill: none;
+  margin-left: 0.25em;
+  path {
+    stroke: currentColor;
+  }
+`;
+
+export const NavLinkDropdown = styled.div`
+  background-color: #333333;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
 `;
 
 export const NavBtnLink = styled(Link)`

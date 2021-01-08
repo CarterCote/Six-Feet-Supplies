@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Button } from '../../globalStyles';
+import { Container, ActionButton } from '../../globalStyles';
 import {
   InfoSec,
   InfoRow,
   InfoColumn,
   TextWrapper,
   TopLine,
-  Heading,
+  SpacedHeading,
   Subtitle,
   ImgWrapper,
   Img
@@ -36,12 +36,12 @@ function InfoSection({
             <InfoColumn>
               <TextWrapper>
                 <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline}</Heading>
+                <SpacedHeading lightText={lightText}>{headline}</SpacedHeading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
                 <Link to='/sign-up'>
-                  <Button big fontBig primary={primary}>
+                  <ActionButton big fontBig primary={primary}>
                     {buttonLabel}
-                  </Button>
+                  </ActionButton>
                 </Link>
               </TextWrapper>
             </InfoColumn>

@@ -2,8 +2,19 @@ import styled from 'styled-components';
 import { FaMagento } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-export const FooterContainer = styled.div`
-  background-color: #101522;
+export const MainFooterContainer = styled.div`
+  background-color: #3078be;
+  padding: 4rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ActionFooterContainer = styled.div`
+  background-color: #fff;
+  border-top: 1px;
+  border-color: #454545;
   padding: 4rem 0 2rem 0;
   display: flex;
   flex-direction: column;
@@ -19,14 +30,14 @@ export const FooterSubscription = styled.section`
   text-align: center;
   margin-bottom: 24px;
   padding: 24px;
-  color: #fff;
+  color: #000;
 `;
 
 export const FooterSubHeading = styled.p`
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-  margin-bottom: 24px;
-  font-size: 24px;
+  font-family: 'FuturaLTPro-Book', Arial, sans-serif;
+  font-weight: bold;
+  ${'' /* margin-bottom: 24px; */}
+  font-size: 42px;
 `;
 
 export const FooterSubText = styled.p`
@@ -68,7 +79,7 @@ export const FooterLinksContainer = styled.div`
   width: 100%;
   max-width: 1000px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
 
   @media screen and (max-width: 820px) {
     padding-top: 32px;
@@ -89,7 +100,7 @@ export const FooterLinkItems = styled.div`
   align-items: flex-start;
   margin: 16px;
   text-align: left;
-  width: 160px;
+  width: 170px;
   box-sizing: border-box;
   color: #fff;
 

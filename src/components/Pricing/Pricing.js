@@ -1,10 +1,19 @@
 import React from 'react';
-import { Button } from '../../globalStyles';
-import { AiFillThunderbolt } from 'react-icons/ai';
-import { GiCrystalBars } from 'react-icons/gi';
-import { GiCutDiamond, GiRock } from 'react-icons/gi';
-import { GiFloatingCrystal } from 'react-icons/gi';
+import { Button, ActionButton, CardButton } from '../../globalStyles';
 import { IconContext } from 'react-icons/lib';
+
+import latimes from "../../images/latimes.jpeg";
+import cnninterview from "../../images/cnninterview.jpg";
+import newsweek from "../../images/newsweek.png";
+import newsweekLogo from "../../images/newsweek-logo.png";
+import cnnLogo from "../../images/CNN-Logo.png";
+import latimesLogo from "../../images/latimes-logo.png";
+
+
+
+
+
+
 import {
   PricingSection,
   PricingWrapper,
@@ -13,6 +22,8 @@ import {
   PricingCard,
   PricingCardInfo,
   PricingCardIcon,
+  PricingCardLogo,
+  PricingCardImg,
   PricingCardPlan,
   PricingCardCost,
   PricingCardLength,
@@ -25,60 +36,57 @@ function Pricing() {
     <IconContext.Provider value={{ color: '#a9b3c1', size: 64 }}>
       <PricingSection>
         <PricingWrapper>
-          <PricingHeading>Our Services</PricingHeading>
+          <PricingHeading>PRESS & TESTIMONIES</PricingHeading>
           <PricingContainer>
             <PricingCard to='/sign-up'>
               <PricingCardInfo>
                 <PricingCardIcon>
-                  <GiRock />
+                  <PricingCardLogo src={latimesLogo} alt="" />   
                 </PricingCardIcon>
-                <PricingCardPlan>Starter Pack</PricingCardPlan>
-                <PricingCardCost>$99.99</PricingCardCost>
-                <PricingCardLength>per month</PricingCardLength>
+                <PricingCardImg src={latimes} alt="" />              
+
                 <PricingCardFeatures>
-                  <PricingCardFeature>100 New Users</PricingCardFeature>
-                  <PricingCardFeature>$10,000 Budget</PricingCardFeature>
-                  <PricingCardFeature>Retargeting analytics</PricingCardFeature>
+                  <PricingCardFeature>"Thank you to these students of West Ranch High School for doing their part to ensure that our most vulnerable communities have access to the food they need during these times. What a terrific example of creating a culture of #metoWE. Bravo! 👏#CaliforniaforAll"</PricingCardFeature>
                 </PricingCardFeatures>
-                <Button primary>Choose Plan</Button>
+                <CardButton style={{marginTop: "23px"}}>Read the article ></CardButton>
               </PricingCardInfo>
             </PricingCard>
             <PricingCard to='/sign-up'>
               <PricingCardInfo>
                 <PricingCardIcon>
-                  <GiCrystalBars />
+                  <PricingCardLogo src={newsweekLogo} alt="" />   
                 </PricingCardIcon>
-                <PricingCardPlan>Gold Rush</PricingCardPlan>
-                <PricingCardCost>$299.99</PricingCardCost>
-                <PricingCardLength>per month</PricingCardLength>
+                <PricingCardImg src={newsweek} alt="" />              
                 <PricingCardFeatures>
-                  <PricingCardFeature>1000 New Users</PricingCardFeature>
-                  <PricingCardFeature>$50,000 Budget</PricingCardFeature>
-                  <PricingCardFeature>Lead Gen Analytics</PricingCardFeature>
+                  <PricingCardFeature>"Today we’re spotlighting a student-led initiative that focuses on supplying groceries to those who can’t leave their house. Founded by high school students Zoe Monterola and Eric Luo, Six Feet Supplies is a completely free service that assists those in need all while following CDC guidelines. #HeroesOfPandemic</PricingCardFeature>
                 </PricingCardFeatures>
-                <Button primary>Choose Plan</Button>
+                <CardButton>Watch the video ></CardButton>
               </PricingCardInfo>
             </PricingCard>
             <PricingCard to='/sign-up'>
               <PricingCardInfo>
                 <PricingCardIcon>
-                  <GiCutDiamond />
+                  <PricingCardLogo src={cnnLogo} alt="" />              
+
                 </PricingCardIcon>
-                <PricingCardPlan>Diamond Kings</PricingCardPlan>
-                <PricingCardCost>$999.99</PricingCardCost>
-                <PricingCardLength>per month</PricingCardLength>
+                <PricingCardImg src={cnninterview} alt="" />              
+
                 <PricingCardFeatures>
-                  <PricingCardFeature>Unlimited Users</PricingCardFeature>
-                  <PricingCardFeature>Unlimited Budget</PricingCardFeature>
-                  <PricingCardFeature>24/7 Support</PricingCardFeature>
+                  <PricingCardFeature>"I talk to two high school students who set up a free food delivery service @SixFeetSupplies that buys & delivers groceries for those most in need. Here's my chat with Eric Luo & Zoe Monterola:"</PricingCardFeature>
+
                 </PricingCardFeatures>
-                <Button primary>Choose Plan</Button>
+                <CardButton style={{marginTop: "98px"}}>Read the Post ></CardButton>
               </PricingCardInfo>
             </PricingCard>
           </PricingContainer>
+          <ActionButton style={{marginTop: "30px"}}>Read more testimonies here ></ActionButton>
+
         </PricingWrapper>
+
       </PricingSection>
+
     </IconContext.Provider>
+    
   );
 }
 export default Pricing;
